@@ -140,7 +140,14 @@ dmypy.json
 .vscode/
 *.code-workspace
 
+
 # Local History for Visual Studio Code
 .history/
 
 .mypy_cache
+
+.test
+.vscode
+pytest.ini
+README.md
+setup.cfg
