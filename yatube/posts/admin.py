@@ -1,16 +1,14 @@
 from django.contrib import admin
-from django.contrib.auth import get_user_model
 
-from .models import Post
-
-User = get_user_model()
+from .models import Group, Post
 
 
-class Admin(admin.ModelAdmin):
+class Administrator(admin.ModelAdmin):
     list_display = ('text', 'pub_date', 'author', 'group',)
     list_filter = ('text', 'pub_date')
     search_fields = ("text",)
     empty_value_display = "-пусто-"
 
 
-admin.site.register(Post, Admin)
+admin.site.register(Post, Administrator)
+admin.site.register(Group)
